@@ -316,61 +316,82 @@ h1, h2, h3, h4 {
 }
 
 .card-photo {
+  position: relative;
+  height: 320px;
   padding: 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .card-photo .card-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
   padding: 26px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 5%, rgba(0, 0, 0, 0) 70%);
+  transition: background 0.35s ease;
+}
+
+.card-photo .card-body h3 {
+  color: #fff;
+  transition: color 0.35s ease;
+}
+
+.card-photo .card-body p,
+.card-photo .card-body .card-link,
+.card-photo .card-body .disclaimer-note {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.35s ease;
+}
+
+/* Revealed state: mouse hover on devices that support it, or a tap toggling
+   .is-open (see main.js) on touch devices that have no hover. */
+.card-photo.is-open img {
+  transform: scale(1.06);
+}
+
+.card-photo.is-open .card-body {
+  background: rgba(255, 255, 255, 0.97);
+  justify-content: center;
+  text-align: center;
+}
+
+.card-photo.is-open .card-body h3 {
+  color: var(--color-text);
+}
+
+.card-photo.is-open .card-body p {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 10px;
+  color: var(--color-text-light);
+}
+
+.card-photo.is-open .card-body .card-link,
+.card-photo.is-open .card-body .disclaimer-note {
+  max-height: 40px;
+  opacity: 1;
+  margin-top: 12px;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .card-photo {
-    position: relative;
-    height: 320px;
-  }
-
-  .card-photo img {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    transition: transform 0.5s ease;
-  }
-
   .card-photo:hover img {
     transform: scale(1.06);
-  }
-
-  .card-photo .card-body {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: left;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 5%, rgba(0, 0, 0, 0) 70%);
-    transition: background 0.35s ease;
-  }
-
-  .card-photo .card-body h3 {
-    color: #fff;
-    transition: color 0.35s ease;
-  }
-
-  .card-photo .card-body p,
-  .card-photo .card-body .card-link,
-  .card-photo .card-body .disclaimer-note {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    margin-top: 0;
-    transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.35s ease;
   }
 
   .card-photo:hover .card-body {

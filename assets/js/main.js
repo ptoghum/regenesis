@@ -7,4 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
       header.classList.toggle('nav-open');
     });
   }
+
+  var hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!hasHover) {
+    var photoCards = document.querySelectorAll('.card-photo');
+    photoCards.forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.card-link')) return;
+        card.classList.toggle('is-open');
+      });
+    });
+  }
 });

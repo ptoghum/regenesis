@@ -190,20 +190,26 @@ h1, h2, h3, h4 {
 
 .lang-switch {
   display: flex;
-  gap: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  gap: 6px;
 }
 
 .lang-switch a {
-  padding: 4px 6px;
-  border-radius: 6px;
-  color: var(--color-text-light);
+  display: flex;
+  padding: 2px;
+  border-radius: 4px;
+  border: 1.5px solid transparent;
+  line-height: 0;
+}
+
+.lang-switch a svg {
+  display: block;
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
 }
 
 .lang-switch a.active {
-  background: var(--color-accent);
-  color: var(--color-primary-dark);
+  border-color: var(--color-primary);
 }
 
 .nav-toggle {
@@ -309,6 +315,21 @@ h1, h2, h3, h4 {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.06);
 }
 
+.card-photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-photo img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-photo .card-body {
+  padding: 26px;
+}
+
 .card .icon {
   width: 48px;
   height: 48px;
@@ -401,6 +422,62 @@ h1, h2, h3, h4 {
   font-weight: 600;
   text-align: center;
   padding: 20px;
+}
+
+.split-img {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* ===== Floating quick-action buttons ===== */
+
+.floating-actions {
+  position: fixed;
+  right: 22px;
+  top: 60%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 200;
+}
+
+.floating-actions a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition);
+}
+
+.floating-actions a:hover {
+  transform: scale(1.08);
+}
+
+.fab-whatsapp {
+  background: #25d366;
+}
+
+.fab-booking {
+  background: var(--color-primary);
+}
+
+@media (max-width: 700px) {
+  .floating-actions {
+    right: 14px;
+    gap: 10px;
+  }
+
+  .floating-actions a {
+    width: 46px;
+    height: 46px;
+  }
 }
 
 /* ===== CTA banner ===== */

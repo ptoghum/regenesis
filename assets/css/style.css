@@ -231,11 +231,11 @@ h1, h2, h3, h4 {
 /* ===== Hero ===== */
 
 .hero {
-  padding: 150px 0 130px;
+  padding: 180px 0 160px;
   text-align: center;
   background:
     linear-gradient(180deg, rgba(20, 16, 12, 0.42) 0%, rgba(20, 16, 12, 0.5) 100%),
-    url('../img/hero-bg.jpg') center 22% / cover no-repeat;
+    url('../img/hero-bg.jpg') center 28% / cover no-repeat;
 }
 
 .hero .eyebrow {

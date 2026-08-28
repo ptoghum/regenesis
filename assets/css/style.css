@@ -464,6 +464,10 @@ h1, h2, h3, h4 {
   background: #25d366;
 }
 
+.fab-telegram {
+  background: #26a5e4;
+}
+
 .fab-booking {
   background: var(--color-primary);
 }

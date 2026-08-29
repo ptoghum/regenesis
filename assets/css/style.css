@@ -128,6 +128,29 @@ h1, h2, h3, h4 {
   color: var(--color-text-light);
 }
 
+.section-header.has-photo {
+  max-width: 100%;
+  position: relative;
+  padding: 70px 24px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(20, 16, 12, 0.58) 0%, rgba(20, 16, 12, 0.68) 100%),
+    url('../img/services/about-team.jpg') center 22% / cover no-repeat;
+}
+
+.section-header.has-photo .eyebrow {
+  color: var(--color-accent);
+}
+
+.section-header.has-photo h2 {
+  color: #fff;
+}
+
+.section-header.has-photo p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* ===== Header ===== */
 
 .site-header {

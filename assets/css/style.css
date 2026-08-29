@@ -366,6 +366,12 @@ h1, h2, h3, h4 {
     url('../img/services/about-hero.jpg') center 62% / cover no-repeat;
 }
 
+.page-banner.has-photo.photo-services {
+  background:
+    linear-gradient(180deg, rgba(15, 12, 9, 0.66) 0%, rgba(15, 12, 9, 0.74) 100%),
+    url('../img/services/services-hero.jpg') center 50% / cover no-repeat;
+}
+
 .breadcrumb {
   color: var(--color-text-light);
   font-size: 0.9rem;

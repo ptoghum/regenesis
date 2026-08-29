@@ -885,6 +885,25 @@ h1, h2, h3, h4 {
   margin-top: 10px;
 }
 
+.detail-content ul {
+  list-style: disc;
+  margin: 0 0 16px 20px;
+  color: var(--color-text-light);
+}
+
+.detail-content li {
+  margin-bottom: 8px;
+}
+
+.detail-content h2:not(:first-child) {
+  margin-top: 36px;
+}
+
+.detail-wrap.article .detail-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
 @media (max-width: 800px) {
   .detail-wrap {
     flex-direction: column;

@@ -360,6 +360,12 @@ h1, h2, h3, h4 {
   text-decoration: underline;
 }
 
+.page-banner.has-photo.photo-about {
+  background:
+    linear-gradient(180deg, rgba(15, 12, 9, 0.6) 0%, rgba(15, 12, 9, 0.7) 100%),
+    url('../img/services/about-hero.jpg') center 62% / cover no-repeat;
+}
+
 .breadcrumb {
   color: var(--color-text-light);
   font-size: 0.9rem;
